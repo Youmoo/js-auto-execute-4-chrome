@@ -1,0 +1,23 @@
+{
+    "name": "auto-execute",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "icons": {
+        "48": "icon.png"
+    },
+    "homepage_url": "https://github.com/Youmoo",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/zepto.min.js","js/content.js"],
+            "css": [],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": true
+    },
+    "permissions": ["tabs", "<all_urls>"]
+}
